@@ -10,7 +10,7 @@ authors:
     email: kunau@umn.edu
     affiliation: University of Minnesota
     orcid: 'https://orcid.org/0000-0002-8235-224X'
-    name-particle: T. M.
+#    name-particle: T. M.
 #    name-suffix: Kunau
 repository-code: 'https://github.com/umnkunau/GraphMatch/'
 abstract: >-
