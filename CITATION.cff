@@ -11,7 +11,7 @@ authors:
     affiliation: University of Minnesota
     orcid: 'https://orcid.org/0000-0002-8235-224X'
     name-particle: T. M.
-    name-suffix: Kunau
+#    name-suffix: Kunau
 repository-code: 'https://github.com/umnkunau/GraphMatch/'
 abstract: >-
   GraphMatch (GM) is a scalable graph database solution
