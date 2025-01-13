@@ -1,0 +1,22 @@
+#
+# GraphMatch API programs require Python >3.6.x for f-strings, and a collection of non-core libraries.
+# Date: 20250113 
+#
+
+# import csv
+csv
+
+# import sys
+sys
+
+# from neo4j import GraphDatabase
+neo4j
+
+# from iteration_utilities import duplicates, unique_everseen
+iteration_utilities
+
+# decouple import config
+decouple
+
+# for f-strings used in output formatting
+python >3.6.x
