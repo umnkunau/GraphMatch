@@ -1,3 +1,6 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
 cff-version: 1.2.0
 title: GraphMatch
 message: >-
@@ -5,13 +8,11 @@ message: >-
   metadata from this file.
 type: software
 authors:
-  - given-names: Timothy
+  - given-names: Timothy Mark
     family-names: Kunau
     email: kunau@umn.edu
     affiliation: University of Minnesota
     orcid: 'https://orcid.org/0000-0002-8235-224X'
-    name-particle: M
-#    name-suffix: Kunau
 repository-code: 'https://github.com/umnkunau/GraphMatch/'
 abstract: >-
   GraphMatch (GM) is a scalable graph database solution
@@ -21,15 +22,15 @@ abstract: >-
   remained linear with the number of edges, even at a
   production scale.
 keywords:
-  - 'Allogeneic Transplantation'
-  - 'Donor Database'
-  - 'Genotype List String (GLS)'
-  - 'Major Histocompatibility Complex (MHC)'
-  - 'Human Leukocyte Antigen (HLA)'
-  - 'Neo4j'
-  - 'Graph Databases'
-  - 'HLA Typing'
-  - 'Haplotype Frequencies'
-  - 'Stem Cell Matching'
-  - 'Graph Database'
+  - Allogeneic Transplantation
+  - Donor Database
+  - Genotype List String (GLS)
+  - Major Histocompatibility Complex (MHC)
+  - Human Leukocyte Antigen (HLA)
+  - Neo4j
+  - Graph Databases
+  - HLA Typing
+  - Haplotype Frequencies
+  - Stem Cell Matching
+  - Graph Database
 license: MIT
