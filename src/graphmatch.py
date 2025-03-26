@@ -4,7 +4,7 @@
 ##             in support of stem cell transplants.
 ##
 ## Author: Timothy M. Kunau, kunau@umn.edu
-## Version: 202309151015
+## Version: 202503252034 
 ##
 ## Note: requires Python >3.6.x for f-strings, and a collection of non-core libraries.
 ##
@@ -39,23 +39,18 @@ import argparse
 
 parser = argparse.ArgumentParser(
     prog='GraphMatch',
-    description='Takes either a file (-f) of patients or a list of patients (-p) on the CLI and runs match reports.',
-    epilog='(This work is offered as part of Timothy Kunau\'s disertation project, 20230903)')
+    description='Takes either a file (-f) of patients and runs match reports.',
+    epilog='(This work is offered as part of Timothy Kunau\'s dissertation project, 20250325)')
 
 ## enter a file of patients to be serached from the CLI
 parser.add_argument('-f', help='enter the path to the CSV file of PatientUIDs to match.')
-## enter a patient_UID or multiples to be serached from the CLI
-parser.add_argument('-p', help='enter a short list of PatientUIDs to match.')
 
 args = parser.parse_args()
 
 GM_SEARCHFILE = args.f
-GM_SEARCHUIDS = args.p
 
 if GM_DEBUG == 'True':
     print('#### GM_SEARCHFILE: ', GM_SEARCHFILE)
-    print('#### GM_SEARCHUIDS: ', GM_SEARCHUIDS)
-
 
 ## Neo4j connection methods
 class Neo4jConnection:
@@ -138,7 +133,7 @@ with open(GM_SEARCHFILE, mode ='r')as import_file:
             print('\n')              #### DEBUG
 
             ## Patient allele set
-            ## retrive all Patient alleles from db
+            ## retrieve all Patient alleles from db
             patient_allele_query_string = f'''
                 MATCH (p:Patient {{name: \"{PATIENT_ID}\" }})--(pa:Allele)
                 RETURN collect(pa.name) AS pa_list
@@ -153,11 +148,11 @@ with open(GM_SEARCHFILE, mode ='r')as import_file:
 
             ## Query: print the results to the limit specified above
             for record in match_results:
-                ## retrive all Donor alleles from db
+                ## retrieve all Donor alleles from db
                 ## d_unmatched_alleles = d_alleles - shared_alleles
                 DONOR_ID = record['d.name']
-                ## Patient allele set
-                ## retrive all Patient alleles from db
+                ## Donor allele set
+                ## retrieve all Donor alleles from db
                 donor_allele_query_string = f'''
                     MATCH (d:Donor {{name: \"{DONOR_ID}\" }})--(da:Allele)
                     RETURN collect(da.name) AS da_list
